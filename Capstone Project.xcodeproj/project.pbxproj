@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		812A3C542BA0D37A00E2414C /* BigButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A3C532BA0D37A00E2414C /* BigButton.swift */; };
+		812A3C562BA0D94900E2414C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A3C552BA0D94900E2414C /* LoginView.swift */; };
 		81D927002BA0B9730083E648 /* Capstone_ProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D926FF2BA0B9730083E648 /* Capstone_ProjectApp.swift */; };
 		81D927022BA0B9730083E648 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D927012BA0B9730083E648 /* MainView.swift */; };
 		81D927042BA0B9740083E648 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81D927032BA0B9740083E648 /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		812A3C532BA0D37A00E2414C /* BigButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigButton.swift; sourceTree = "<group>"; };
+		812A3C552BA0D94900E2414C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		81D926FC2BA0B9730083E648 /* Capstone Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Capstone Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81D926FF2BA0B9730083E648 /* Capstone_ProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Capstone_ProjectApp.swift; sourceTree = "<group>"; };
 		81D927012BA0B9730083E648 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 			children = (
 				81D927012BA0B9730083E648 /* MainView.swift */,
 				81E6AE862BA0CB520005BBE6 /* RegisterView.swift */,
+				812A3C552BA0D94900E2414C /* LoginView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				81D927002BA0B9730083E648 /* Capstone_ProjectApp.swift in Sources */,
 				81E6AE8E2BA0D1F60005BBE6 /* Logo.swift in Sources */,
 				81E6AE832BA0CA8F0005BBE6 /* User.swift in Sources */,
+				812A3C562BA0D94900E2414C /* LoginView.swift in Sources */,
 				812A3C542BA0D37A00E2414C /* BigButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

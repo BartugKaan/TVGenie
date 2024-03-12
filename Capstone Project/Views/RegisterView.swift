@@ -15,7 +15,7 @@ struct RegisterView: View {
     var body: some View {
       VStack{
         Logo()
-          .padding(.vertical, 20)
+          .padding(.vertical, 50)
         Form{
           Section{
             TextField("Full name", text: $username)
@@ -33,7 +33,7 @@ struct RegisterView: View {
         }
         Spacer()
       }
-      .background(Color("whiteColor"))
+      .background(Color(UIColor(resource: .white)))
     }
 }
 

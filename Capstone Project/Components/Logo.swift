@@ -12,10 +12,19 @@ struct Logo: View {
       ZStack{
         GradiantBackground()
           .cornerRadius(15)
-        Image(.logo)
-          .resizable()
           .frame(width: 200,height: 200)
-          .shadow(radius: 10)
+        HStack {
+          Text("TV Genie")
+            .font(.largeTitle)
+            .bold()
+          .foregroundStyle(.white)
+          
+          Image(.logo)
+            .resizable()
+            .frame(width: 75,height: 75)
+            .shadow(radius: 10)
+        }
+          
       }
     }
 }
