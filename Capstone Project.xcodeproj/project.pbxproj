@@ -31,6 +31,7 @@
 		81D927312BA0BBEB0083E648 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 81D927302BA0BBEB0083E648 /* FirebaseStorageCombine-Community */; };
 		81E6AE832BA0CA8F0005BBE6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E6AE822BA0CA8F0005BBE6 /* User.swift */; };
 		81E6AE852BA0CAA30005BBE6 /* TVItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E6AE842BA0CAA30005BBE6 /* TVItem.swift */; };
+		81E6AE872BA0CB520005BBE6 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E6AE862BA0CB520005BBE6 /* RegisterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		81D9270D2BA0BB3A0083E648 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		81E6AE822BA0CA8F0005BBE6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		81E6AE842BA0CAA30005BBE6 /* TVItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVItem.swift; sourceTree = "<group>"; };
+		81E6AE862BA0CB520005BBE6 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 		81D926FE2BA0B9730083E648 /* Capstone Project */ = {
 			isa = PBXGroup;
 			children = (
+				81E6AE882BA0CB590005BBE6 /* Components */,
 				81D927352BA0BC370083E648 /* ViewModels */,
 				81D927342BA0BC2C0083E648 /* Models */,
 				81D927332BA0BC210083E648 /* Views */,
@@ -122,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				81D927012BA0B9730083E648 /* MainView.swift */,
+				81E6AE862BA0CB520005BBE6 /* RegisterView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -140,6 +144,13 @@
 			children = (
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		81E6AE882BA0CB590005BBE6 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81E6AE852BA0CAA30005BBE6 /* TVItem.swift in Sources */,
+				81E6AE872BA0CB520005BBE6 /* RegisterView.swift in Sources */,
 				81D927022BA0B9730083E648 /* MainView.swift in Sources */,
 				81D927002BA0B9730083E648 /* Capstone_ProjectApp.swift in Sources */,
 				81E6AE832BA0CA8F0005BBE6 /* User.swift in Sources */,
