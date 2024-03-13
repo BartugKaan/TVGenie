@@ -8,27 +8,39 @@
 import SwiftUI
 
 struct LoginView: View {
-  @State var email: String = ""
-  @State var password: String = ""
+  @StateObject var viewModel = LoginViewModel()
   var body: some View {
-    VStack{
-      Logo()
-        .padding(.vertical, 50)
-      Form{
-        TextField("Email", text: $email)
-        TextField("Password", text: $password)
+    NavigationStack {
+      VStack {
+        VStack{
+          Logo()
+            .padding(.vertical, 50)
+          Form{
+            TextField("Email", text: $viewModel.email)
+            SecureField("Password", text: $viewModel.password)
+          }
+          .frame(height: 150)
+          .scrollDisabled(true)
+          BigButton(title: "Sign-In") {
+            viewModel.login()
+          }
+          .padding(.top,25)
+          if !viewModel.errorMessage.isEmpty{
+            Text(viewModel.errorMessage)
+              .foregroundStyle(.red)
+          }
+          Spacer()
+        }
+        VStack {
+          Text("Are you new here?")
+          NavigationLink("Create a new Account") {
+            RegisterView()
+          }
+          .padding(.bottom,20)
+        }
       }
-      .frame(height: 150)
-      .scrollDisabled(true)
-      
-      
-      BigButton(title: "Sign-In") {
-        
-      }
-      .padding(.top,25)
-      Spacer()
+      .background(Color(.systemBackground))
     }
-    .background(Color(UIColor(resource: .white)))
   }
 }
 

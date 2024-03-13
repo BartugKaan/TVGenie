@@ -8,9 +8,7 @@
 import SwiftUI
 
 struct RegisterView: View {
-  @State var username: String = ""
-  @State var email: String = ""
-  @State var password: String = ""
+  @StateObject var viewModel = RegisterViewModel()
   
     var body: some View {
       VStack{
@@ -18,9 +16,9 @@ struct RegisterView: View {
           .padding(.vertical, 50)
         Form{
           Section{
-            TextField("Full name", text: $username)
-            TextField("Email", text: $email)
-            SecureField("Password", text: $password)
+            TextField("Full name", text: $viewModel.name)
+            TextField("Email", text: $viewModel.email)
+            SecureField("Password", text: $viewModel.password)
           } header: {
             Text("Register Form")
           }
@@ -29,11 +27,15 @@ struct RegisterView: View {
         .scrollDisabled(true)
         
         BigButton(title: "Sign-up") {
-          
+          viewModel.register()
+        }
+        if !viewModel.errorMessage.isEmpty{
+          Text(viewModel.errorMessage)
+            .foregroundStyle(.red)
         }
         Spacer()
       }
-      .background(Color(UIColor(resource: .white)))
+      .background(Color(.systemBackground))
     }
 }
 
