@@ -8,8 +8,10 @@
 import Foundation
 import FirebaseAuth
 import FirebaseFirestore
+import SwiftUI
 
 class RegisterViewModel: ObservableObject {
+//  @AppStorage("email-link") var emailLink: String?
   @Published var name = ""
   @Published var email = ""
   @Published var password = ""
@@ -18,6 +20,20 @@ class RegisterViewModel: ObservableObject {
   init() {
     
   }
+  
+//  func sendSignInLink() async {
+//    let actionCodeSettings = ActionCodeSettings()
+//    actionCodeSettings.handleCodeInApp = true
+//    actionCodeSettings.url = URL(string: "Todo")
+//    do{
+//      try await Auth.auth().sendSignInLink(toEmail: email, actionCodeSettings: actionCodeSettings)
+//    } catch {
+//      print(error.localizedDescription)
+//      errorMessage = error.localizedDescription
+//      emailLink = email
+//    }
+//    
+//  }
   
   func register() {
     guard validate() else {
