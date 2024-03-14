@@ -17,6 +17,8 @@ struct LoginView: View {
             .padding(.vertical, 50)
           Form{
             TextField("Email", text: $viewModel.email)
+              .autocorrectionDisabled()
+              .textInputAutocapitalization(.never)
             SecureField("Password", text: $viewModel.password)
           }
           .frame(height: 150)

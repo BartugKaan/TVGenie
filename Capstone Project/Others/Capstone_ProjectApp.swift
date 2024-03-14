@@ -6,12 +6,18 @@
 //
 
 import SwiftUI
-
+import FirebaseCore
 @main
 struct Capstone_ProjectApp: App {
-    var body: some Scene {
-        WindowGroup {
-            MainView()
-        }
+  
+  init(){
+    FirebaseApp.configure()
+  }
+  
+  
+  var body: some Scene {
+    WindowGroup {
+      MainView()
     }
+  }
 }

@@ -17,7 +17,10 @@ struct RegisterView: View {
         Form{
           Section{
             TextField("Full name", text: $viewModel.name)
+              .autocorrectionDisabled()
             TextField("Email", text: $viewModel.email)
+              .autocorrectionDisabled()
+              .textInputAutocapitalization(.never)
             SecureField("Password", text: $viewModel.password)
           } header: {
             Text("Register Form")
