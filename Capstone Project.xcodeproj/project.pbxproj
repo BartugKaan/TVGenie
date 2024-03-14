@@ -13,6 +13,8 @@
 		812FAB012BA3296300891699 /* ProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812FAB002BA3296300891699 /* ProductListView.swift */; };
 		812FAB032BA32ADF00891699 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812FAB022BA32ADF00891699 /* ProfileView.swift */; };
 		812FAB052BA32C2500891699 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812FAB042BA32C2500891699 /* ProfileViewModel.swift */; };
+		812FAB082BA3347A00891699 /* SplineRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = 812FAB072BA3347A00891699 /* SplineRuntime */; };
+		812FAB0E2BA33D1C00891699 /* avatar_copy.splineswift in Resources */ = {isa = PBXBuildFile; fileRef = 812FAB0D2BA33D1B00891699 /* avatar_copy.splineswift */; };
 		814604672BA2217300F3F521 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814604662BA2217300F3F521 /* LoginViewModel.swift */; };
 		814604692BA2231200F3F521 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814604682BA2231200F3F521 /* RegisterViewModel.swift */; };
 		8146046B2BA2237400F3F521 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8146046A2BA2237400F3F521 /* Extensions.swift */; };
@@ -53,6 +55,7 @@
 		812FAB002BA3296300891699 /* ProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListView.swift; sourceTree = "<group>"; };
 		812FAB022BA32ADF00891699 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		812FAB042BA32C2500891699 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		812FAB0D2BA33D1B00891699 /* avatar_copy.splineswift */ = {isa = PBXFileReference; lastKnownFileType = file; path = avatar_copy.splineswift; sourceTree = "<group>"; };
 		814604662BA2217300F3F521 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		814604682BA2231200F3F521 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		8146046A2BA2237400F3F521 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -85,6 +88,7 @@
 				81D927232BA0BBEB0083E648 /* FirebaseFirestore in Frameworks */,
 				81D927192BA0BBEB0083E648 /* FirebaseAuth in Frameworks */,
 				81D927252BA0BBEB0083E648 /* FirebaseFirestoreCombine-Community in Frameworks */,
+				812FAB082BA3347A00891699 /* SplineRuntime in Frameworks */,
 				81D927152BA0BBEB0083E648 /* FirebaseAnalyticsSwift in Frameworks */,
 				81D927212BA0BBEB0083E648 /* FirebaseDynamicLinks in Frameworks */,
 				81D927112BA0BBEB0083E648 /* FirebaseAnalytics in Frameworks */,
@@ -117,6 +121,7 @@
 		81D926FE2BA0B9730083E648 /* Capstone Project */ = {
 			isa = PBXGroup;
 			children = (
+				812FAB0D2BA33D1B00891699 /* avatar_copy.splineswift */,
 				81E6AE882BA0CB590005BBE6 /* Components */,
 				81D927352BA0BC370083E648 /* ViewModels */,
 				81D927342BA0BC2C0083E648 /* Models */,
@@ -223,6 +228,7 @@
 				81D9272C2BA0BBEB0083E648 /* FirebasePerformance */,
 				81D9272E2BA0BBEB0083E648 /* FirebaseStorage */,
 				81D927302BA0BBEB0083E648 /* FirebaseStorageCombine-Community */,
+				812FAB072BA3347A00891699 /* SplineRuntime */,
 			);
 			productName = "Capstone Project";
 			productReference = 81D926FC2BA0B9730083E648 /* Capstone Project.app */;
@@ -254,6 +260,7 @@
 			mainGroup = 81D926F32BA0B9730083E648;
 			packageReferences = (
 				81D9270F2BA0BBEB0083E648 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				812FAB062BA3347A00891699 /* XCRemoteSwiftPackageReference "spline-ios" */,
 			);
 			productRefGroup = 81D926FD2BA0B9730083E648 /* Products */;
 			projectDirPath = "";
@@ -271,6 +278,7 @@
 			files = (
 				81D927072BA0B9740083E648 /* Preview Assets.xcassets in Resources */,
 				81D927042BA0B9740083E648 /* Assets.xcassets in Resources */,
+				812FAB0E2BA33D1C00891699 /* avatar_copy.splineswift in Resources */,
 				81D9270E2BA0BB3A0083E648 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -508,6 +516,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		812FAB062BA3347A00891699 /* XCRemoteSwiftPackageReference "spline-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/splinetool/spline-ios";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		81D9270F2BA0BBEB0083E648 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -519,6 +535,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		812FAB072BA3347A00891699 /* SplineRuntime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 812FAB062BA3347A00891699 /* XCRemoteSwiftPackageReference "spline-ios" */;
+			productName = SplineRuntime;
+		};
 		81D927102BA0BBEB0083E648 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 81D9270F2BA0BBEB0083E648 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

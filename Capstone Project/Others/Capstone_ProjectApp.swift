@@ -7,6 +7,7 @@
 
 import SwiftUI
 import FirebaseCore
+import SplineRuntime
 @main
 struct Capstone_ProjectApp: App {
   

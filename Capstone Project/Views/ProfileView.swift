@@ -6,12 +6,17 @@
 //
 
 import SwiftUI
+import SplineRuntime
 
 struct ProfileView: View {
   @StateObject var viewModel = ProfileViewModel()
   var body: some View {
     NavigationStack {
       VStack {
+        ProfileImageView()
+          .frame(width: 200,height: 200)
+          .clipShape(.circle)
+          .padding(.top, 20)
         if let user = viewModel.user{
           profile(user: user)
         } else {
@@ -45,13 +50,7 @@ struct ProfileView: View {
 
 @ViewBuilder
 func profile(user: User) -> some View{
-  Image(systemName: "person.circle")
-    .resizable()
-    .aspectRatio(contentMode: .fit)
-    .foregroundStyle(.lightDark)
-    .frame(width: 125,height: 125)
-    .padding(.all, 30)
-  VStack{
+    VStack{
     HStack {
       Text("User Name :")
         .font(.title2)
@@ -72,4 +71,16 @@ func profile(user: User) -> some View{
     .padding(.all, 10)
   }
   Spacer()
+}
+
+struct ProfileImageView: View {
+  var body: some View {
+    // fetching from cloud
+    // let url = URL(string: "https://build.spline.design/UN6GDwWbZhVb429-EjT5/scene.splineswift")!
+
+    // // fetching from local
+    let url = Bundle.main.url(forResource: "avatar_copy", withExtension: "splineswift")!
+
+    try? SplineView(sceneFileURL: url).ignoresSafeArea(.all)
+  }
 }
