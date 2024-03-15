@@ -23,7 +23,7 @@ class LoginViewModel: ObservableObject {
     }
     Auth.auth().signIn(withEmail: email, password: password){_,error in
       if error != nil {
-        self.errorMessage = "Login failed"
+        self.errorMessage = "Login failed. Error : \(error?.localizedDescription ?? "")"
       }
     }
   }

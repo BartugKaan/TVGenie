@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PasswordResetView: View {
-  @State var email = ""
+  @StateObject var viewModel = PasswordResetViewModel()
   var body: some View {
     NavigationStack{
       VStack{
@@ -20,7 +20,7 @@ struct PasswordResetView: View {
           .font(.subheadline)
           .padding(.bottom, 10)
         
-        TextField("Email",text: $email)
+        TextField("Email",text: $viewModel.email)
           .frame(height: 50)
           .padding(.horizontal, 30)
           .font(.title)
@@ -30,13 +30,14 @@ struct PasswordResetView: View {
                     .padding(.horizontal,15)
               )
         BigButton(title: "Send Link", action: {
-          
+          viewModel.resetPassword(email: viewModel.email)
         })
         .padding(.top, 20)
-        
         Spacer()
-        
       }
+    }
+    .alert("Something gone wrong", isPresented: $viewModel.hasError){
+      Button("Ok",role: .cancel){ }
     }
   }
 }

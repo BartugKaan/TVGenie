@@ -24,6 +24,7 @@
 		819942F32BA4AD7F00553934 /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819942F22BA4AD7F00553934 /* PhotoView.swift */; };
 		819942F52BA4ADBA00553934 /* PhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819942F42BA4ADBA00553934 /* PhotoViewModel.swift */; };
 		819942F72BA4C6B900553934 /* PasswordResetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819942F62BA4C6B900553934 /* PasswordResetView.swift */; };
+		819942F92BA4CB4300553934 /* PasswordResetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819942F82BA4CB4300553934 /* PasswordResetViewModel.swift */; };
 		81D927002BA0B9730083E648 /* Capstone_ProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D926FF2BA0B9730083E648 /* Capstone_ProjectApp.swift */; };
 		81D927022BA0B9730083E648 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D927012BA0B9730083E648 /* MainView.swift */; };
 		81D927042BA0B9740083E648 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81D927032BA0B9740083E648 /* Assets.xcassets */; };
@@ -71,6 +72,7 @@
 		819942F22BA4AD7F00553934 /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
 		819942F42BA4ADBA00553934 /* PhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewModel.swift; sourceTree = "<group>"; };
 		819942F62BA4C6B900553934 /* PasswordResetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetView.swift; sourceTree = "<group>"; };
+		819942F82BA4CB4300553934 /* PasswordResetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetViewModel.swift; sourceTree = "<group>"; };
 		81D926FC2BA0B9730083E648 /* Capstone Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Capstone Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81D926FF2BA0B9730083E648 /* Capstone_ProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Capstone_ProjectApp.swift; sourceTree = "<group>"; };
 		81D927012BA0B9730083E648 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 				812FAB042BA32C2500891699 /* ProfileViewModel.swift */,
 				81525DD52BA4A54E0015A52F /* ProductListViewModel.swift */,
 				819942F42BA4ADBA00553934 /* PhotoViewModel.swift */,
+				819942F82BA4CB4300553934 /* PasswordResetViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 				819942F72BA4C6B900553934 /* PasswordResetView.swift in Sources */,
 				812FAB012BA3296300891699 /* ProductListView.swift in Sources */,
 				8146046B2BA2237400F3F521 /* Extensions.swift in Sources */,
+				819942F92BA4CB4300553934 /* PasswordResetViewModel.swift in Sources */,
 				81E6AE8E2BA0D1F60005BBE6 /* Logo.swift in Sources */,
 				812FAB052BA32C2500891699 /* ProfileViewModel.swift in Sources */,
 				81E6AE832BA0CA8F0005BBE6 /* User.swift in Sources */,
