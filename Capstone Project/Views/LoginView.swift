@@ -45,6 +45,12 @@ struct LoginView: View {
             viewModel.login()
           }
           .padding(.top,25)
+          NavigationLink {
+            PasswordResetView()
+          } label: {
+            Text("Forgot your password ?")
+          }
+
           if !viewModel.errorMessage.isEmpty{
             Text(viewModel.errorMessage)
               .foregroundStyle(.red)
