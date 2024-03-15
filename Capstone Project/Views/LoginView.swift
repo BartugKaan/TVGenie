@@ -9,6 +9,7 @@ import SwiftUI
 
 struct LoginView: View {
   @StateObject var viewModel = LoginViewModel()
+  @State var isSecured = true
   var body: some View {
     NavigationStack {
       VStack {
@@ -19,7 +20,24 @@ struct LoginView: View {
             TextField("Email", text: $viewModel.email)
               .autocorrectionDisabled()
               .textInputAutocapitalization(.never)
-            SecureField("Password", text: $viewModel.password)
+            HStack {
+              Group{
+                if isSecured{
+                  SecureField("Password", text: $viewModel.password)
+                    .autocorrectionDisabled()
+                    .textInputAutocapitalization(.none)
+                }
+                else {
+                  TextField("Password", text: $viewModel.password)
+                    .autocorrectionDisabled()
+                    .textInputAutocapitalization(.none)
+                }
+              }
+              Button(action: { isSecured.toggle()}, label: {
+                Image(systemName: self.isSecured ? "eye.slash" : "eye")
+                                    .accentColor(.gray)
+              })
+            }
           }
           .frame(height: 150)
           .scrollDisabled(true)
