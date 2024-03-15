@@ -31,9 +31,14 @@ var accountView: some View{
       .tabItem {
         Label("Home", systemImage: "house")
       }
+    PhotoView()
+      .tabItem {
+        Label("Camera", systemImage: "camera.fill")
+      }
     ProfileView()
       .tabItem {
         Label("Profile", systemImage: "person.circle")
       }
+    
   }
 }
