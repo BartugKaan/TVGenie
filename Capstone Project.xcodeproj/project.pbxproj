@@ -18,6 +18,7 @@
 		814604672BA2217300F3F521 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814604662BA2217300F3F521 /* LoginViewModel.swift */; };
 		814604692BA2231200F3F521 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814604682BA2231200F3F521 /* RegisterViewModel.swift */; };
 		8146046B2BA2237400F3F521 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8146046A2BA2237400F3F521 /* Extensions.swift */; };
+		81525DD42BA4A0B50015A52F /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81525DD32BA4A0B50015A52F /* CameraView.swift */; };
 		81D927002BA0B9730083E648 /* Capstone_ProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D926FF2BA0B9730083E648 /* Capstone_ProjectApp.swift */; };
 		81D927022BA0B9730083E648 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D927012BA0B9730083E648 /* MainView.swift */; };
 		81D927042BA0B9740083E648 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81D927032BA0B9740083E648 /* Assets.xcassets */; };
@@ -59,6 +60,7 @@
 		814604662BA2217300F3F521 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		814604682BA2231200F3F521 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		8146046A2BA2237400F3F521 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		81525DD32BA4A0B50015A52F /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CameraView.swift; path = "Capstone Project/Components/CameraView.swift"; sourceTree = SOURCE_ROOT; };
 		81D926FC2BA0B9730083E648 /* Capstone Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Capstone Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81D926FF2BA0B9730083E648 /* Capstone_ProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Capstone_ProjectApp.swift; sourceTree = "<group>"; };
 		81D927012BA0B9730083E648 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 				812A3C552BA0D94900E2414C /* LoginView.swift */,
 				812FAB002BA3296300891699 /* ProductListView.swift */,
 				812FAB022BA32ADF00891699 /* ProfileView.swift */,
+				81525DD32BA4A0B50015A52F /* CameraView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				81E6AE852BA0CAA30005BBE6 /* TVItem.swift in Sources */,
 				81E6AE872BA0CB520005BBE6 /* RegisterView.swift in Sources */,
 				814604672BA2217300F3F521 /* LoginViewModel.swift in Sources */,
+				81525DD42BA4A0B50015A52F /* CameraView.swift in Sources */,
 				81E6AE8A2BA0CF690005BBE6 /* GradiantBackground.swift in Sources */,
 				81D927022BA0B9730083E648 /* MainView.swift in Sources */,
 				81E6AE8C2BA0D0220005BBE6 /* MotionAnimationView.swift in Sources */,
