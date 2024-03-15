@@ -12,12 +12,7 @@ struct ProductListView: View {
   var body: some View {
     NavigationStack{
       VStack{
-        CameraView()
-        .padding(.horizontal, 20)
-        Divider()
-          .padding(.horizontal, 30)
-        
-        Spacer()
+        Text("TV List Page")
       }
       .navigationTitle("TV Genie")
     }

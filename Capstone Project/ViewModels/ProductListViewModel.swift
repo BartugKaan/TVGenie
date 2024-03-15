@@ -9,11 +9,5 @@ import Foundation
 
 class ProductListViewModel: ObservableObject{
   @Published var productame: String = ""
-  
-  
-  
-  
-  func toCameraView(){
-    
-  }
+
 }
