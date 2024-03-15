@@ -10,8 +10,9 @@ import SwiftUI
 struct CameraView: View {
     var body: some View {
       HStack{
-        Text("Search products with camera")
+        Text("Search products with camera:")
           .padding(.trailing, 10)
+          .font(.title2)
         Spacer()
         ZStack
         {
