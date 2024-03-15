@@ -10,7 +10,7 @@ import SwiftUI
 struct CameraView: View {
     var body: some View {
       HStack{
-        Text("Search Products with Photo")
+        Text("Search products with camera")
           .padding(.trailing, 10)
         Spacer()
         ZStack
@@ -19,10 +19,15 @@ struct CameraView: View {
             .frame(width: 50,height: 40)
             .cornerRadius(20)
             .foregroundStyle(LinearGradient(colors: [.indigo,.pink], startPoint: .topLeading, endPoint: .bottomTrailing))
-          Button(action: {}, label: {
+          NavigationLink {
+            PhotoView()
+          } label: {
             Image(systemName: "camera.fill")
-              .foregroundStyle(Color.white)
-          })
+              .foregroundStyle(.white)
+              .font(.title2)
+              .padding(.all, 10)
+          }
+
         }
       }
     }

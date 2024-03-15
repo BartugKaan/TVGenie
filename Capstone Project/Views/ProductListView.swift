@@ -16,6 +16,7 @@ struct ProductListView: View {
         .padding(.horizontal, 20)
         Divider()
           .padding(.horizontal, 30)
+        
         Spacer()
       }
       .navigationTitle("TV Genie")

@@ -19,6 +19,10 @@
 		814604692BA2231200F3F521 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814604682BA2231200F3F521 /* RegisterViewModel.swift */; };
 		8146046B2BA2237400F3F521 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8146046A2BA2237400F3F521 /* Extensions.swift */; };
 		81525DD42BA4A0B50015A52F /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81525DD32BA4A0B50015A52F /* CameraView.swift */; };
+		81525DD62BA4A54E0015A52F /* ProductListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81525DD52BA4A54E0015A52F /* ProductListViewModel.swift */; };
+		8166D7FF2BA4AC9F0086A30C /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 8166D7FE2BA4AC9F0086A30C /* Resnet50.mlmodel */; };
+		819942F32BA4AD7F00553934 /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819942F22BA4AD7F00553934 /* PhotoView.swift */; };
+		819942F52BA4ADBA00553934 /* PhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819942F42BA4ADBA00553934 /* PhotoViewModel.swift */; };
 		81D927002BA0B9730083E648 /* Capstone_ProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D926FF2BA0B9730083E648 /* Capstone_ProjectApp.swift */; };
 		81D927022BA0B9730083E648 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D927012BA0B9730083E648 /* MainView.swift */; };
 		81D927042BA0B9740083E648 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81D927032BA0B9740083E648 /* Assets.xcassets */; };
@@ -61,6 +65,10 @@
 		814604682BA2231200F3F521 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		8146046A2BA2237400F3F521 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		81525DD32BA4A0B50015A52F /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CameraView.swift; path = "Capstone Project/Components/CameraView.swift"; sourceTree = SOURCE_ROOT; };
+		81525DD52BA4A54E0015A52F /* ProductListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewModel.swift; sourceTree = "<group>"; };
+		8166D7FE2BA4AC9F0086A30C /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Resnet50.mlmodel; sourceTree = "<group>"; };
+		819942F22BA4AD7F00553934 /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
+		819942F42BA4ADBA00553934 /* PhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewModel.swift; sourceTree = "<group>"; };
 		81D926FC2BA0B9730083E648 /* Capstone Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Capstone Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81D926FF2BA0B9730083E648 /* Capstone_ProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Capstone_ProjectApp.swift; sourceTree = "<group>"; };
 		81D927012BA0B9730083E648 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -124,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				812FAB0D2BA33D1B00891699 /* avatar_copy.splineswift */,
+				8166D7FE2BA4AC9F0086A30C /* Resnet50.mlmodel */,
 				81E6AE882BA0CB590005BBE6 /* Components */,
 				81D927352BA0BC370083E648 /* ViewModels */,
 				81D927342BA0BC2C0083E648 /* Models */,
@@ -161,7 +170,7 @@
 				812A3C552BA0D94900E2414C /* LoginView.swift */,
 				812FAB002BA3296300891699 /* ProductListView.swift */,
 				812FAB022BA32ADF00891699 /* ProfileView.swift */,
-				81525DD32BA4A0B50015A52F /* CameraView.swift */,
+				819942F22BA4AD7F00553934 /* PhotoView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -182,6 +191,8 @@
 				814604682BA2231200F3F521 /* RegisterViewModel.swift */,
 				812FAAFE2BA3261700891699 /* MainViewModel.swift */,
 				812FAB042BA32C2500891699 /* ProfileViewModel.swift */,
+				81525DD52BA4A54E0015A52F /* ProductListViewModel.swift */,
+				819942F42BA4ADBA00553934 /* PhotoViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -193,6 +204,7 @@
 				81E6AE8B2BA0D0220005BBE6 /* MotionAnimationView.swift */,
 				81E6AE8D2BA0D1F60005BBE6 /* Logo.swift */,
 				812A3C532BA0D37A00E2414C /* BigButton.swift */,
+				81525DD32BA4A0B50015A52F /* CameraView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -294,6 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81E6AE852BA0CAA30005BBE6 /* TVItem.swift in Sources */,
+				819942F52BA4ADBA00553934 /* PhotoViewModel.swift in Sources */,
 				81E6AE872BA0CB520005BBE6 /* RegisterView.swift in Sources */,
 				814604672BA2217300F3F521 /* LoginViewModel.swift in Sources */,
 				81525DD42BA4A0B50015A52F /* CameraView.swift in Sources */,
@@ -302,7 +315,9 @@
 				81E6AE8C2BA0D0220005BBE6 /* MotionAnimationView.swift in Sources */,
 				81D927002BA0B9730083E648 /* Capstone_ProjectApp.swift in Sources */,
 				812FAAFF2BA3261700891699 /* MainViewModel.swift in Sources */,
+				819942F32BA4AD7F00553934 /* PhotoView.swift in Sources */,
 				812FAB032BA32ADF00891699 /* ProfileView.swift in Sources */,
+				8166D7FF2BA4AC9F0086A30C /* Resnet50.mlmodel in Sources */,
 				814604692BA2231200F3F521 /* RegisterViewModel.swift in Sources */,
 				812FAB012BA3296300891699 /* ProductListView.swift in Sources */,
 				8146046B2BA2237400F3F521 /* Extensions.swift in Sources */,
@@ -310,6 +325,7 @@
 				812FAB052BA32C2500891699 /* ProfileViewModel.swift in Sources */,
 				81E6AE832BA0CA8F0005BBE6 /* User.swift in Sources */,
 				812A3C562BA0D94900E2414C /* LoginView.swift in Sources */,
+				81525DD62BA4A54E0015A52F /* ProductListViewModel.swift in Sources */,
 				812A3C542BA0D37A00E2414C /* BigButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -448,6 +464,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "TV Genie";
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires to usage of the camera.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -478,6 +495,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "TV Genie";
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires to usage of the camera.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
