@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "CapstoneLogoLight.png",
+      "filename" : "TvGenieLogoLight.png",
       "idiom" : "universal"
     },
     {
@@ -11,7 +11,7 @@
           "value" : "dark"
         }
       ],
-      "filename" : "CapstoneLogoDark.png",
+      "filename" : "TvGenieLogoDark.png",
       "idiom" : "universal"
     }
   ],
