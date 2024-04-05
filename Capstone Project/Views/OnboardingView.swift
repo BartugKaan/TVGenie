@@ -13,14 +13,6 @@ struct OnboardingView: View {
         "Find the television you are looking for from our wide range of products in our system.",
         "Search for the televisions that are suitable for your intended use.",
         "Create an account and add your desired product to your favorites."]
-    var onbImages = [UIImage]()
-    @State var currentIndex = 0
-    
-    init() {
-        onbImages.append(.tvGenieOnb1)
-        onbImages.append(.tvGenieOnb2)
-        onbImages.append(.tvGenieOnb3)
-    }
     
     var body: some View {
         NavigationStack{
