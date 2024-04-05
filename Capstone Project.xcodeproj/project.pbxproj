@@ -20,7 +20,8 @@
 		8146046B2BA2237400F3F521 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8146046A2BA2237400F3F521 /* Extensions.swift */; };
 		81525DD42BA4A0B50015A52F /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81525DD32BA4A0B50015A52F /* CameraView.swift */; };
 		81525DD62BA4A54E0015A52F /* ProductListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81525DD52BA4A54E0015A52F /* ProductListViewModel.swift */; };
-		8166D7FF2BA4AC9F0086A30C /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 8166D7FE2BA4AC9F0086A30C /* Resnet50.mlmodel */; };
+		81846F852BC0071A00BAF3CB /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 81846F842BC0071A00BAF3CB /* Resnet50.mlmodel */; };
+		81846F872BC0073400BAF3CB /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81846F862BC0073400BAF3CB /* OnboardingView.swift */; };
 		819942F32BA4AD7F00553934 /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819942F22BA4AD7F00553934 /* PhotoView.swift */; };
 		819942F52BA4ADBA00553934 /* PhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819942F42BA4ADBA00553934 /* PhotoViewModel.swift */; };
 		819942F72BA4C6B900553934 /* PasswordResetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819942F62BA4C6B900553934 /* PasswordResetView.swift */; };
@@ -68,7 +69,8 @@
 		8146046A2BA2237400F3F521 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		81525DD32BA4A0B50015A52F /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CameraView.swift; path = "Capstone Project/Components/CameraView.swift"; sourceTree = SOURCE_ROOT; };
 		81525DD52BA4A54E0015A52F /* ProductListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewModel.swift; sourceTree = "<group>"; };
-		8166D7FE2BA4AC9F0086A30C /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Resnet50.mlmodel; sourceTree = "<group>"; };
+		81846F842BC0071A00BAF3CB /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Resnet50.mlmodel; sourceTree = "<group>"; };
+		81846F862BC0073400BAF3CB /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		819942F22BA4AD7F00553934 /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
 		819942F42BA4ADBA00553934 /* PhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewModel.swift; sourceTree = "<group>"; };
 		819942F62BA4C6B900553934 /* PasswordResetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetView.swift; sourceTree = "<group>"; };
@@ -135,8 +137,8 @@
 		81D926FE2BA0B9730083E648 /* Capstone Project */ = {
 			isa = PBXGroup;
 			children = (
+				81846F842BC0071A00BAF3CB /* Resnet50.mlmodel */,
 				812FAB0D2BA33D1B00891699 /* avatar_copy.splineswift */,
-				8166D7FE2BA4AC9F0086A30C /* Resnet50.mlmodel */,
 				81E6AE882BA0CB590005BBE6 /* Components */,
 				81D927352BA0BC370083E648 /* ViewModels */,
 				81D927342BA0BC2C0083E648 /* Models */,
@@ -176,6 +178,7 @@
 				812FAB022BA32ADF00891699 /* ProfileView.swift */,
 				819942F22BA4AD7F00553934 /* PhotoView.swift */,
 				819942F62BA4C6B900553934 /* PasswordResetView.swift */,
+				81846F862BC0073400BAF3CB /* OnboardingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -323,17 +326,18 @@
 				812FAAFF2BA3261700891699 /* MainViewModel.swift in Sources */,
 				819942F32BA4AD7F00553934 /* PhotoView.swift in Sources */,
 				812FAB032BA32ADF00891699 /* ProfileView.swift in Sources */,
-				8166D7FF2BA4AC9F0086A30C /* Resnet50.mlmodel in Sources */,
 				814604692BA2231200F3F521 /* RegisterViewModel.swift in Sources */,
 				819942F72BA4C6B900553934 /* PasswordResetView.swift in Sources */,
 				812FAB012BA3296300891699 /* ProductListView.swift in Sources */,
 				8146046B2BA2237400F3F521 /* Extensions.swift in Sources */,
 				819942F92BA4CB4300553934 /* PasswordResetViewModel.swift in Sources */,
 				81E6AE8E2BA0D1F60005BBE6 /* Logo.swift in Sources */,
+				81846F872BC0073400BAF3CB /* OnboardingView.swift in Sources */,
 				812FAB052BA32C2500891699 /* ProfileViewModel.swift in Sources */,
 				81E6AE832BA0CA8F0005BBE6 /* User.swift in Sources */,
 				812A3C562BA0D94900E2414C /* LoginView.swift in Sources */,
 				81525DD62BA4A54E0015A52F /* ProductListViewModel.swift in Sources */,
+				81846F852BC0071A00BAF3CB /* Resnet50.mlmodel in Sources */,
 				812A3C542BA0D37A00E2414C /* BigButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
