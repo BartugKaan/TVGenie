@@ -15,7 +15,7 @@ struct MainView: View {
          //AppPage Screen View
         accountView
       } else{
-        LoginView()
+        OnboardingView()
       }
     }
 }

@@ -13,10 +13,7 @@ struct ProfileView: View {
   var body: some View {
     NavigationStack {
       VStack {
-        ProfileImageView()
-          .frame(width: 200,height: 200)
-          .clipShape(.circle)
-          .padding(.top, 20)
+        
         if let user = viewModel.user{
           profile(user: user)
         } else {
