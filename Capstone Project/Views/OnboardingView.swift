@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct OnboardingView: View {
+    let images = ["TvGenie-Onb1","TvGenie-Onb2","TvGenie-Onb3"]
+    let subTitles = [
+        "Find the television you are looking for from our wide range of products in our system.",
+        "Search for the televisions that are suitable for your intended use.",
+        "Create an account and add your desired product to your favorites."]
     var onbImages = [UIImage]()
     @State var currentIndex = 0
     
@@ -24,38 +29,30 @@ struct OnboardingView: View {
                     .font(.largeTitle)
                     .fontWeight(.bold)
                 
-                    Image(uiImage: onbImages[currentIndex])
-                        .resizable()
-                        .scaledToFit()
-                        .padding(.horizontal, 48)
-                    
-                    Text("Search for the best television you need according to your preferences.")
-                        .padding(.vertical, 16)
-                        .padding(.horizontal, 36)
-                        .multilineTextAlignment(.center)
-                        .font(.title3)
                 
-                HStack(spacing: 16){
-                    Circle()
-                        .frame(width: 8,height: 8)
-                        .onTapGesture {
-                            currentIndex = 0
+                TabView {
+                    ForEach(0..<3){ i in
+                        VStack {
+                            Image("\(images[i])")
+                                .resizable()
+                                .scaledToFit()
+                                .padding(.horizontal, 48)
+                            Text("\(subTitles[i])")
+                                .padding()
+                                .font(.title2)
+                                .padding(.horizontal, 24)
+                                .multilineTextAlignment(.center)
+                                .foregroundStyle(.white)
                         }
-                        .foregroundStyle(currentIndex == 0 ? .indigo : .pink)
-                    Circle()
-                        .frame(width: 8,height: 8)
-                        .onTapGesture {
-                            currentIndex = 1
-                        }
-                        .foregroundStyle(currentIndex == 1 ? .indigo : .pink)
-                    Circle()
-                        .frame(width: 8,height: 8)
-                        .onTapGesture {
-                            currentIndex = 2
-                        }
-                        .foregroundStyle(currentIndex == 2 ? .indigo : .pink)
+                    }
                 }
-                .padding(.bottom, 16)
+                .tabViewStyle(PageTabViewStyle())
+                .background(Color(UIColor.systemIndigo))
+                .opacity(0.7)
+                .cornerRadius(20)
+                .padding()
+                
+                
                 
                 NavigationLink {
                     RegisterView()
@@ -75,7 +72,6 @@ struct OnboardingView: View {
                 } label: {
                     Text("Do you already have an account?")
                 }
-
             }
         }
     }
