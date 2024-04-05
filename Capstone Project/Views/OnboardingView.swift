@@ -24,17 +24,23 @@ struct OnboardingView: View {
                 
                 TabView {
                     ForEach(0..<3){ i in
-                        VStack {
-                            Image("\(images[i])")
-                                .resizable()
-                                .scaledToFit()
-                                .padding(.horizontal, 48)
-                            Text("\(subTitles[i])")
-                                .padding()
-                                .font(.title2)
-                                .padding(.horizontal, 24)
-                                .multilineTextAlignment(.center)
-                                .foregroundStyle(.white)
+                        ZStack {
+                            MotionAnimationView()
+                                .background(Rectangle().foregroundColor(.clear).frame(width: 400,height: 400).mask(Rectangle()))
+                                
+                            Spacer()
+                            VStack {
+                                Image("\(images[i])")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .padding(.horizontal, 48)
+                                Text("\(subTitles[i])")
+                                    .padding()
+                                    .font(.title2)
+                                    .padding(.horizontal, 24)
+                                    .multilineTextAlignment(.center)
+                                    .foregroundStyle(.white)
+                            }
                         }
                     }
                 }
