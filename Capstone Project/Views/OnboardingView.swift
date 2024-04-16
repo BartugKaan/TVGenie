@@ -16,12 +16,11 @@ struct OnboardingView: View {
     
     var body: some View {
         NavigationStack{
-            VStack {
+            VStack(spacing: 0){
                 Text("Tv Genie")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                
-                
+                    .font(.system(size: 40, design: .rounded))
+                    .fontWeight(.semibold)
+                    .padding(.all, 0)
                 TabView {
                     ForEach(0..<3){ i in
                         ZStack {
@@ -30,28 +29,24 @@ struct OnboardingView: View {
                                 
                             Spacer()
                             VStack {
-                                Image("\(images[i])")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .padding(.horizontal, 48)
                                 Text("\(subTitles[i])")
                                     .padding()
                                     .font(.title2)
                                     .padding(.horizontal, 24)
                                     .multilineTextAlignment(.center)
-                                    .foregroundStyle(.white)
+                                Image("\(images[i])")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .padding(.horizontal, 48)
                             }
                         }
                     }
                 }
                 .tabViewStyle(PageTabViewStyle())
-                .background(Color(UIColor.systemIndigo))
-                .opacity(0.7)
-                .cornerRadius(20)
-                .padding()
-                
-                
-                
+                .indexViewStyle(.page(backgroundDisplayMode: .always))
+                .frame(height: 500)
+                .cornerRadius(30)
+                .padding(.top, 0)
                 NavigationLink {
                     RegisterView()
                 } label: {
@@ -64,13 +59,16 @@ struct OnboardingView: View {
                             .font(.title2)
                             .fontWeight(.medium)
                     }
+                    .padding(.top, 8)
                 }
                 NavigationLink {
                     LoginView()
                 } label: {
                     Text("Do you already have an account?")
+                        .padding(.top, 16)
                 }
             }
+            .frame(maxWidth: .infinity,maxHeight: .infinity)
         }
     }
 }
