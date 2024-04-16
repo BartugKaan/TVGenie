@@ -23,6 +23,19 @@ struct ProductListView: View {
               }
               BrandButtonsViewGroup()
           }
+          VStack{
+              HStack{
+                  Text("Televisions sorted by the scores")
+                      .padding(.all, 16)
+                      .font(.title3)
+                      .multilineTextAlignment(.leading)
+                  Spacer()
+              }
+              List{
+                  //TODO: Detaylı cell view tasarlanıcak
+                  Text("TV Cell")
+              }
+          }
           Spacer()
       }
       .toolbar{
