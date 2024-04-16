@@ -47,6 +47,7 @@
 		81D9272D2BA0BBEB0083E648 /* FirebasePerformance in Frameworks */ = {isa = PBXBuildFile; productRef = 81D9272C2BA0BBEB0083E648 /* FirebasePerformance */; };
 		81D9272F2BA0BBEB0083E648 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 81D9272E2BA0BBEB0083E648 /* FirebaseStorage */; };
 		81D927312BA0BBEB0083E648 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 81D927302BA0BBEB0083E648 /* FirebaseStorageCombine-Community */; };
+		81E273AE2BCEFCAE003287E2 /* BrandButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E273AD2BCEFCAE003287E2 /* BrandButton.swift */; };
 		81E6AE832BA0CA8F0005BBE6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E6AE822BA0CA8F0005BBE6 /* User.swift */; };
 		81E6AE852BA0CAA30005BBE6 /* TVItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E6AE842BA0CAA30005BBE6 /* TVItem.swift */; };
 		81E6AE872BA0CB520005BBE6 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E6AE862BA0CB520005BBE6 /* RegisterView.swift */; };
@@ -79,6 +80,7 @@
 		81D927032BA0B9740083E648 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		81D927062BA0B9740083E648 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		81D9270D2BA0BB3A0083E648 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		81E273AD2BCEFCAE003287E2 /* BrandButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandButton.swift; sourceTree = "<group>"; };
 		81E6AE822BA0CA8F0005BBE6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		81E6AE842BA0CAA30005BBE6 /* TVItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVItem.swift; sourceTree = "<group>"; };
 		81E6AE862BA0CB520005BBE6 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 				81E6AE8D2BA0D1F60005BBE6 /* Logo.swift */,
 				812A3C532BA0D37A00E2414C /* BigButton.swift */,
 				81525DD32BA4A0B50015A52F /* CameraView.swift */,
+				81E273AD2BCEFCAE003287E2 /* BrandButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				81E6AE832BA0CA8F0005BBE6 /* User.swift in Sources */,
 				812A3C562BA0D94900E2414C /* LoginView.swift in Sources */,
 				81525DD62BA4A54E0015A52F /* ProductListViewModel.swift in Sources */,
+				81E273AE2BCEFCAE003287E2 /* BrandButton.swift in Sources */,
 				81846F852BC0071A00BAF3CB /* Resnet50.mlmodel in Sources */,
 				812A3C542BA0D37A00E2414C /* BigButton.swift in Sources */,
 			);
