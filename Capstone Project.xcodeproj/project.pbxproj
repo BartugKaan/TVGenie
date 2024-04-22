@@ -14,6 +14,8 @@
 		812FAB032BA32ADF00891699 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812FAB022BA32ADF00891699 /* ProfileView.swift */; };
 		812FAB052BA32C2500891699 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812FAB042BA32C2500891699 /* ProfileViewModel.swift */; };
 		812FAB082BA3347A00891699 /* SplineRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = 812FAB072BA3347A00891699 /* SplineRuntime */; };
+		81334E572BD6A5F800077EF4 /* YOLOv8.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 81334E562BD6A5F800077EF4 /* YOLOv8.mlmodel */; };
+		81334E5B2BD6AB8500077EF4 /* Observation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81334E5A2BD6AB8500077EF4 /* Observation.swift */; };
 		814604672BA2217300F3F521 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814604662BA2217300F3F521 /* LoginViewModel.swift */; };
 		814604692BA2231200F3F521 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814604682BA2231200F3F521 /* RegisterViewModel.swift */; };
 		8146046B2BA2237400F3F521 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8146046A2BA2237400F3F521 /* Extensions.swift */; };
@@ -22,7 +24,6 @@
 		81846F852BC0071A00BAF3CB /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 81846F842BC0071A00BAF3CB /* Resnet50.mlmodel */; };
 		81846F872BC0073400BAF3CB /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81846F862BC0073400BAF3CB /* OnboardingView.swift */; };
 		819942F32BA4AD7F00553934 /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819942F22BA4AD7F00553934 /* PhotoView.swift */; };
-		819942F52BA4ADBA00553934 /* PhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819942F42BA4ADBA00553934 /* PhotoViewModel.swift */; };
 		819942F72BA4C6B900553934 /* PasswordResetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819942F62BA4C6B900553934 /* PasswordResetView.swift */; };
 		819942F92BA4CB4300553934 /* PasswordResetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819942F82BA4CB4300553934 /* PasswordResetViewModel.swift */; };
 		81D927002BA0B9730083E648 /* Capstone_ProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D926FF2BA0B9730083E648 /* Capstone_ProjectApp.swift */; };
@@ -63,6 +64,8 @@
 		812FAB002BA3296300891699 /* ProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListView.swift; sourceTree = "<group>"; };
 		812FAB022BA32ADF00891699 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		812FAB042BA32C2500891699 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		81334E562BD6A5F800077EF4 /* YOLOv8.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = YOLOv8.mlmodel; sourceTree = "<group>"; };
+		81334E5A2BD6AB8500077EF4 /* Observation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observation.swift; sourceTree = "<group>"; };
 		814604662BA2217300F3F521 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		814604682BA2231200F3F521 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		8146046A2BA2237400F3F521 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -71,7 +74,6 @@
 		81846F842BC0071A00BAF3CB /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Resnet50.mlmodel; sourceTree = "<group>"; };
 		81846F862BC0073400BAF3CB /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		819942F22BA4AD7F00553934 /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
-		819942F42BA4ADBA00553934 /* PhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewModel.swift; sourceTree = "<group>"; };
 		819942F62BA4C6B900553934 /* PasswordResetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetView.swift; sourceTree = "<group>"; };
 		819942F82BA4CB4300553934 /* PasswordResetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetViewModel.swift; sourceTree = "<group>"; };
 		81D926FC2BA0B9730083E648 /* Capstone Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Capstone Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,6 +139,7 @@
 		81D926FE2BA0B9730083E648 /* Capstone Project */ = {
 			isa = PBXGroup;
 			children = (
+				81334E562BD6A5F800077EF4 /* YOLOv8.mlmodel */,
 				81846F842BC0071A00BAF3CB /* Resnet50.mlmodel */,
 				81E6AE882BA0CB590005BBE6 /* Components */,
 				81D927352BA0BC370083E648 /* ViewModels */,
@@ -187,6 +190,7 @@
 			children = (
 				81E6AE822BA0CA8F0005BBE6 /* User.swift */,
 				81E6AE842BA0CAA30005BBE6 /* TVItem.swift */,
+				81334E5A2BD6AB8500077EF4 /* Observation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -199,7 +203,6 @@
 				812FAAFE2BA3261700891699 /* MainViewModel.swift */,
 				812FAB042BA32C2500891699 /* ProfileViewModel.swift */,
 				81525DD52BA4A54E0015A52F /* ProductListViewModel.swift */,
-				819942F42BA4ADBA00553934 /* PhotoViewModel.swift */,
 				819942F82BA4CB4300553934 /* PasswordResetViewModel.swift */,
 			);
 			path = ViewModels;
@@ -314,7 +317,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				81E6AE852BA0CAA30005BBE6 /* TVItem.swift in Sources */,
-				819942F52BA4ADBA00553934 /* PhotoViewModel.swift in Sources */,
 				81E6AE872BA0CB520005BBE6 /* RegisterView.swift in Sources */,
 				814604672BA2217300F3F521 /* LoginViewModel.swift in Sources */,
 				81525DD42BA4A0B50015A52F /* CameraView.swift in Sources */,
@@ -335,7 +337,9 @@
 				812FAB052BA32C2500891699 /* ProfileViewModel.swift in Sources */,
 				81E6AE832BA0CA8F0005BBE6 /* User.swift in Sources */,
 				812A3C562BA0D94900E2414C /* LoginView.swift in Sources */,
+				81334E572BD6A5F800077EF4 /* YOLOv8.mlmodel in Sources */,
 				81525DD62BA4A54E0015A52F /* ProductListViewModel.swift in Sources */,
+				81334E5B2BD6AB8500077EF4 /* Observation.swift in Sources */,
 				81E273AE2BCEFCAE003287E2 /* BrandButton.swift in Sources */,
 				81846F852BC0071A00BAF3CB /* Resnet50.mlmodel in Sources */,
 				812A3C542BA0D37A00E2414C /* BigButton.swift in Sources */,
