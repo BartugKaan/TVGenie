@@ -26,23 +26,23 @@ struct PhotoView: View {
                 isImagePickerPresented.toggle()
             }, label: {
                 ZStack{
-                          Rectangle()
-                            .frame(width: 75,height: 75)
-                            .foregroundStyle(.linearGradient(colors: [.indigo,.pink], startPoint: .topLeading, endPoint: .bottomTrailing))
-                            .cornerRadius(30)
-                          Image(systemName: "camera.fill")
-                            .foregroundStyle(Color.white)
-                            .font(.title)
-                        }
-                        .padding(.top, 20)
+                    Rectangle()
+                        .frame(width: 75,height: 75)
+                        .foregroundStyle(.linearGradient(colors: [.indigo,.pink], startPoint: .topLeading, endPoint: .bottomTrailing))
+                        .cornerRadius(30)
+                    Image(systemName: "camera.fill")
+                        .foregroundStyle(Color.white)
+                        .font(.title)
+                }
+                .padding(.top, 20)
             })
             .padding(.bottom, 30)
-
-                .sheet(isPresented: $isImagePickerPresented, onDismiss: loadImage) {
+            
+            .sheet(isPresented: $isImagePickerPresented, onDismiss: loadImage) {
                 ImagePicker(image: self.$capturedImage)
                     .ignoresSafeArea()
             }
-                .sheet(isPresented: $showResultSheet) {
+            .sheet(isPresented: $showResultSheet) {
                 VStack {
                     if let image = capturedImage {
                         Image(uiImage: image)
@@ -50,25 +50,63 @@ struct PhotoView: View {
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 300, height: 300)
                             .overlay {
-                            GeometryReader { geometry in
-                                Path { path in
-                                    for observation in detectedObjects {
-                                        path.addRect(VNImageRectForNormalizedRect(observation.boundingBox, Int(geometry.size.width), Int(geometry.size.height)))
+                                GeometryReader { geometry in
+                                    Path { path in
+                                        for observation in detectedObjects {
+                                            path.addRect(VNImageRectForNormalizedRect(observation.boundingBox, Int(geometry.size.width), Int(geometry.size.height)))
+                                        }
                                     }
-                                }
                                     .stroke(Color.red, lineWidth: 1.5)
+                                }
                             }
-                        }
                     }
                     if !detectedObjects.isEmpty {
-                        List(detectedObjects, id: \.label) { item in
-                            HStack {
-                                Text(item.label.capitalized)
-                                Spacer()
-                                Text("\(item.confidence * 100, specifier: "%.2f")%")
+                        let tvDetected = detectedObjects.contains(where: { $0.label.lowercased() == "tv" })
+                        if tvDetected {
+                            Section {
+                                ForEach(detectedObjects, id: \.label) { item in
+                                    if item.label.lowercased() == "tv" {
+                                        DetectedObjectRow(item: item)
+                                    }
+                                }
+                            } header: {
+                                HStack{
+                                    Text("These products are available in our system")
+                                        .font(.title2)
+                                    Spacer()
+                                }
+                                .padding(.vertical, 8)
                             }
+                            Section{
+                                ForEach(detectedObjects, id: \.label) { item in
+                                    if item.label.lowercased() != "tv" {
+                                        DetectedObjectRow(item: item)
+                                    }
+                                }
+                            } header: {
+                                HStack{
+                                    Text("These products are not available in our system")
+                                        .font(.title2)
+                                    Spacer()
+                                }
+                                .padding(.vertical, 8)
+                            }
+                        } else {
+                            Section{
+                                ForEach(detectedObjects, id: \.label) { item in
+                                    DetectedObjectRow(item: item)
+                                }
+                            }
+                        header: {
+                            HStack{
+                                Text("These products are not available in our system")
+                                    .font(.title2)
+                                Spacer()
+                            }
+                            .padding(.vertical, 8)
                         }
-                    } else {
+                        }
+                    }  else {
                         VStack {
                             Text("Something goes wrong")
                             Button("Please try again!") {
@@ -76,11 +114,11 @@ struct PhotoView: View {
                                 detectedObjects = []
                                 showResultSheet.toggle()
                             }
-                                .buttonStyle(.borderedProminent)
+                            .buttonStyle(.borderedProminent)
                         }
                     }
                 }
-                    .padding(.all)
+                .padding(.all)
             }
         }
     }
@@ -118,39 +156,39 @@ struct PhotoView: View {
 
 struct ImagePicker: UIViewControllerRepresentable {
     @Binding var image: UIImage?
-
+    
     class Coordinator: NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
         @Binding var image: UIImage?
-
+        
         init(image: Binding<UIImage?>) {
             _image = image
         }
-
+        
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
             if let uiImage = info[.originalImage] as? UIImage {
                 image = uiImage
             }
-
+            
             picker.dismiss(animated: true)
         }
-
+        
         func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
             picker.dismiss(animated: true)
         }
     }
-
+    
     func makeCoordinator() -> Coordinator {
         return Coordinator(image: $image)
     }
-
+    
     func makeUIViewController(context: UIViewControllerRepresentableContext<ImagePicker>) -> UIImagePickerController {
         let picker = UIImagePickerController()
         picker.delegate = context.coordinator
         picker.sourceType = .camera
         return picker
     }
-
-
+    
+    
     func updateUIViewController(_ uiViewController: UIImagePickerController, context: UIViewControllerRepresentableContext<ImagePicker>) { }
 }
 
@@ -160,20 +198,35 @@ func convertToCVPixelBuffer(newImage: UIImage) -> CVPixelBuffer? {
     let attrs = [kCVPixelBufferCGImageCompatibilityKey: kCFBooleanTrue, kCVPixelBufferCGBitmapContextCompatibilityKey: kCFBooleanTrue] as CFDictionary
     var pixelBuffer: CVPixelBuffer?
     _ = CVPixelBufferCreate(kCFAllocatorDefault, Int(newImage.size.width), Int(newImage.size.height), kCVPixelFormatType_32ARGB, attrs, &pixelBuffer)
-
+    
     CVPixelBufferLockBaseAddress(pixelBuffer!, CVPixelBufferLockFlags(rawValue: 0))
-
+    
     let pixelData = CVPixelBufferGetBaseAddress(pixelBuffer!)
-
+    
     let rgbColorSpace = CGColorSpaceCreateDeviceRGB()
     let context = CGContext(data: pixelData, width: Int(newImage.size.width), height: Int(newImage.size.height), bitsPerComponent: 8, bytesPerRow: CVPixelBufferGetBytesPerRow(pixelBuffer!), space: rgbColorSpace, bitmapInfo: CGImageAlphaInfo.noneSkipFirst.rawValue)
-
+    
     context?.translateBy(x: 0, y: newImage.size.height)
     context?.scaleBy(x: 1.0, y: -1.0)
-
+    
     UIGraphicsPushContext(context!)
     newImage.draw(in: CGRect(x: 0, y: 0, width: newImage.size.width, height: newImage.size.height))
     UIGraphicsPopContext()
     CVPixelBufferUnlockBaseAddress(pixelBuffer!, CVPixelBufferLockFlags(rawValue: 0))
     return pixelBuffer
+}
+
+
+struct DetectedObjectRow: View {
+    let item: Observation
+    
+    var body: some View {
+        HStack {
+            Text(item.label.capitalized)
+                .font(.title3)
+            Spacer()
+            Text("\(item.confidence * 100, specifier: "%.2f")%")
+        }
+        .padding(.all)
+    }
 }
