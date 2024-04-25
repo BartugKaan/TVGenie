@@ -19,8 +19,12 @@ struct PhotoView: View {
     var body: some View {
         VStack {
             Spacer()
-            Text("Please take a photo of the product.")
-                .font(.title3)
+            Text("Please ensure that the photo you take is clear and that the object you're capturing is centered.")
+                .font(.title2)
+                .foregroundStyle(Color(uiColor: .systemRed))
+                .fontWeight(.semibold)
+                .multilineTextAlignment(.center)
+                .padding(.all, 24)
             Spacer()
             Button(action: {
                 isImagePickerPresented.toggle()
