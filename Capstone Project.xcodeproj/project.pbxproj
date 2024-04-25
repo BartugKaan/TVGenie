@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8124FC192BDA7C6900F5F0B7 /* TVCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8124FC182BDA7C6900F5F0B7 /* TVCellView.swift */; };
 		812A3C542BA0D37A00E2414C /* BigButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A3C532BA0D37A00E2414C /* BigButton.swift */; };
 		812A3C562BA0D94900E2414C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A3C552BA0D94900E2414C /* LoginView.swift */; };
 		812FAAFF2BA3261700891699 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812FAAFE2BA3261700891699 /* MainViewModel.swift */; };
@@ -21,7 +22,6 @@
 		8146046B2BA2237400F3F521 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8146046A2BA2237400F3F521 /* Extensions.swift */; };
 		81525DD42BA4A0B50015A52F /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81525DD32BA4A0B50015A52F /* CameraView.swift */; };
 		81525DD62BA4A54E0015A52F /* ProductListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81525DD52BA4A54E0015A52F /* ProductListViewModel.swift */; };
-		81846F852BC0071A00BAF3CB /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 81846F842BC0071A00BAF3CB /* Resnet50.mlmodel */; };
 		81846F872BC0073400BAF3CB /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81846F862BC0073400BAF3CB /* OnboardingView.swift */; };
 		819942F32BA4AD7F00553934 /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819942F22BA4AD7F00553934 /* PhotoView.swift */; };
 		819942F72BA4C6B900553934 /* PasswordResetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819942F62BA4C6B900553934 /* PasswordResetView.swift */; };
@@ -58,6 +58,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8124FC182BDA7C6900F5F0B7 /* TVCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVCellView.swift; sourceTree = "<group>"; };
 		812A3C532BA0D37A00E2414C /* BigButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigButton.swift; sourceTree = "<group>"; };
 		812A3C552BA0D94900E2414C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		812FAAFE2BA3261700891699 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
@@ -71,7 +72,6 @@
 		8146046A2BA2237400F3F521 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		81525DD32BA4A0B50015A52F /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CameraView.swift; path = "Capstone Project/Components/CameraView.swift"; sourceTree = SOURCE_ROOT; };
 		81525DD52BA4A54E0015A52F /* ProductListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewModel.swift; sourceTree = "<group>"; };
-		81846F842BC0071A00BAF3CB /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Resnet50.mlmodel; sourceTree = "<group>"; };
 		81846F862BC0073400BAF3CB /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		819942F22BA4AD7F00553934 /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
 		819942F62BA4C6B900553934 /* PasswordResetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetView.swift; sourceTree = "<group>"; };
@@ -120,6 +120,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8124FC172BDA7C5800F5F0B7 /* CellView */ = {
+			isa = PBXGroup;
+			children = (
+				8124FC182BDA7C6900F5F0B7 /* TVCellView.swift */,
+			);
+			path = CellView;
+			sourceTree = "<group>";
+		};
 		81D926F32BA0B9730083E648 = {
 			isa = PBXGroup;
 			children = (
@@ -140,7 +148,6 @@
 			isa = PBXGroup;
 			children = (
 				81334E562BD6A5F800077EF4 /* YOLOv8.mlmodel */,
-				81846F842BC0071A00BAF3CB /* Resnet50.mlmodel */,
 				81E6AE882BA0CB590005BBE6 /* Components */,
 				81D927352BA0BC370083E648 /* ViewModels */,
 				81D927342BA0BC2C0083E648 /* Models */,
@@ -173,6 +180,7 @@
 		81D927332BA0BC210083E648 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8124FC172BDA7C5800F5F0B7 /* CellView */,
 				81D927012BA0B9730083E648 /* MainView.swift */,
 				81E6AE862BA0CB520005BBE6 /* RegisterView.swift */,
 				812A3C552BA0D94900E2414C /* LoginView.swift */,
@@ -320,6 +328,7 @@
 				81E6AE872BA0CB520005BBE6 /* RegisterView.swift in Sources */,
 				814604672BA2217300F3F521 /* LoginViewModel.swift in Sources */,
 				81525DD42BA4A0B50015A52F /* CameraView.swift in Sources */,
+				8124FC192BDA7C6900F5F0B7 /* TVCellView.swift in Sources */,
 				81E6AE8A2BA0CF690005BBE6 /* GradiantBackground.swift in Sources */,
 				81D927022BA0B9730083E648 /* MainView.swift in Sources */,
 				81E6AE8C2BA0D0220005BBE6 /* MotionAnimationView.swift in Sources */,
@@ -341,7 +350,6 @@
 				81525DD62BA4A54E0015A52F /* ProductListViewModel.swift in Sources */,
 				81334E5B2BD6AB8500077EF4 /* Observation.swift in Sources */,
 				81E273AE2BCEFCAE003287E2 /* BrandButton.swift in Sources */,
-				81846F852BC0071A00BAF3CB /* Resnet50.mlmodel in Sources */,
 				812A3C542BA0D37A00E2414C /* BigButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

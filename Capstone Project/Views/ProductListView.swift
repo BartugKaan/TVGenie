@@ -8,60 +8,64 @@
 import SwiftUI
 
 struct ProductListView: View {
-  @State var productName: String = ""
-  var body: some View {
-    NavigationStack{
-      VStack{
-          CustomSearchStack(searchText: productName)
-              .padding(.top,16)
-          VStack{
-              HStack{
-                  Text("Brands")
-                      .padding(.all, 16)
-                      .font(.title3)
-                  Spacer()
-              }
-              BrandButtonsViewGroup()
-          }
-          VStack{
-              HStack{
-                  Text("Televisions sorted by the scores")
-                      .padding(.all, 16)
-                      .font(.title3)
-                      .multilineTextAlignment(.leading)
-                  Spacer()
-              }
-              List{
-                  //TODO: Detaylı cell view tasarlanıcak
-                  Text("TV Cell")
-              }
-          }
-          Spacer()
-      }
-      .toolbar{
-          ToolbarItem(placement: .principal){
-              VStack{
-                  Text("Welcome to TV Genie!")
-                      .font(.title2)
-                      .fontWeight(.semibold)
-              }
-          }
-          ToolbarItem(placement: .topBarTrailing){
-              NavigationLink {
-                  ProfileView()
-              } label: {
-                  Image(systemName: "person.circle")
-              }
-          }
-      }
-      .toolbarBackground(.visible, for: .navigationBar)
-      .toolbarBackground(Color.clear, for: .navigationBar)
+    @State var productName: String = ""
+    var body: some View {
+        NavigationStack{
+            VStack{
+                CustomSearchStack(searchText: productName)
+                    .padding(.top,16)
+                VStack{
+                    HStack{
+                        Text("Brands")
+                            .padding(.all, 16)
+                            .font(.title3)
+                        Spacer()
+                    }
+                    BrandButtonsViewGroup()
+                }
+                VStack{
+                    HStack{
+                        Text("Televisions sorted by the scores")
+                            .padding(.all, 16)
+                            .font(.title3)
+                            .multilineTextAlignment(.leading)
+                        Spacer()
+                    }
+                    List{
+                        //Cell Tasarımı
+                        ForEach(0..<5){i in
+                            TVCellView()
+                        }
+                    }
+                    .listItemTint(.clear)
+                    .listRowSpacing(30)
+                }
+                Spacer()
+            }
+            .toolbar{
+                ToolbarItem(placement: .principal){
+                    VStack{
+                        Text("Welcome to TV Genie!")
+                            .font(.title2)
+                            .fontWeight(.semibold)
+                    }
+                }
+                ToolbarItem(placement: .topBarTrailing){
+                    NavigationLink {
+                        ProfileView()
+                    } label: {
+                        Image(systemName: "person.circle")
+                    }
+                }
+            }
+            .toolbarBackground(.visible, for: .navigationBar)
+            .toolbarBackground(Color.clear, for: .navigationBar)
+        }
     }
-  }
 }
 
 #Preview {
-  ProductListView()
+    ProductListView()
 }
 
 
