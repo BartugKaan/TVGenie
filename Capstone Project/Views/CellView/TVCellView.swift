@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct TVCellView: View {
     @State var name : String
@@ -15,13 +16,16 @@ struct TVCellView: View {
     var body: some View {
         VStack{
             HStack{
-                Image(systemName: "tv.fill")
+                WebImage(url: URL(string: imageUrl))
                     .resizable()
-                    .scaledToFit()
-                    .frame(width: 150, height: 100)
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 100,height: 100)
+                    .padding(/*@START_MENU_TOKEN@*/EdgeInsets()/*@END_MENU_TOKEN@*/)
+                    .background(.clear)
                 VStack(alignment: .leading){
                     Text(name)
                         .font(.system(size: 20))
+                        .padding(.all, 4)
                     Text(brand)
                         .font(.caption)
                     Spacer()

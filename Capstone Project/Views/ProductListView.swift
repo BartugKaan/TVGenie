@@ -38,7 +38,11 @@ struct ProductListView: View{
                             Text("Boş Liste")
                         } else {
                             ForEach(viewModel.products, id: \.id){item in
-                                TVCellView(name: item.name, brand: item.brand, rank: item.rank,imageUrl: item.imageUrl)
+                                NavigationLink {
+                                    // Detail Page Will Added
+                                } label: {
+                                    TVCellView(name: item.name, brand: item.brand, rank: item.rank,imageUrl: item.imageUrl)
+                                }
                             }
                         }
                     }
