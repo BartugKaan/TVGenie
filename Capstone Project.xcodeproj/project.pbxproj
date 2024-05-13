@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		811E1C9C2BF1EA1F0087B6FE /* dataset.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 811E1C9B2BF1EA1F0087B6FE /* dataset.sqlite */; };
 		8124FC192BDA7C6900F5F0B7 /* TVCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8124FC182BDA7C6900F5F0B7 /* TVCellView.swift */; };
 		812A3C542BA0D37A00E2414C /* BigButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A3C532BA0D37A00E2414C /* BigButton.swift */; };
 		812A3C562BA0D94900E2414C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A3C552BA0D94900E2414C /* LoginView.swift */; };
@@ -58,6 +59,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		811E1C9B2BF1EA1F0087B6FE /* dataset.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = dataset.sqlite; sourceTree = "<group>"; };
 		8124FC182BDA7C6900F5F0B7 /* TVCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVCellView.swift; sourceTree = "<group>"; };
 		812A3C532BA0D37A00E2414C /* BigButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigButton.swift; sourceTree = "<group>"; };
 		812A3C552BA0D94900E2414C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 		81D926FE2BA0B9730083E648 /* Capstone Project */ = {
 			isa = PBXGroup;
 			children = (
+				811E1C9B2BF1EA1F0087B6FE /* dataset.sqlite */,
 				81334E562BD6A5F800077EF4 /* YOLOv8.mlmodel */,
 				81E6AE882BA0CB590005BBE6 /* Components */,
 				81D927352BA0BC370083E648 /* ViewModels */,
@@ -311,6 +314,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				811E1C9C2BF1EA1F0087B6FE /* dataset.sqlite in Resources */,
 				81D927072BA0B9740083E648 /* Preview Assets.xcassets in Resources */,
 				81D927042BA0B9740083E648 /* Assets.xcassets in Resources */,
 				81D9270E2BA0BB3A0083E648 /* GoogleService-Info.plist in Resources */,
