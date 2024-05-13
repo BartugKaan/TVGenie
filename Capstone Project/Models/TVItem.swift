@@ -8,6 +8,7 @@
 import Foundation
 
 class TVItem {
+    let id = UUID()
     let name : String
     let brand : String
     let warranty : String
@@ -18,7 +19,7 @@ class TVItem {
     let refrshRate : String
     let screenResolution : String
     let powerConsumption : String
-    let cost : Int
+    let cost : String
     let cpuCoreCount : String
     let wifiSpecs : String
     let screenType : String
@@ -28,7 +29,7 @@ class TVItem {
     let rank : Int
     let imageUrl : String
     
-    init(name: String, brand: String, warranty: String, hdmiCount: String, usbCount: String, screenSize: String, audioPower: String, refrshRate: String, screenResolution: String, powerConsumption: String, cost: Int, cpuCoreCount: String, wifiSpecs: String, screenType: String, isSmart: String, hdmiType: String, ciScore: String, rank: Int, imageUrl: String) {
+    init(name: String, brand: String, warranty: String, hdmiCount: String, usbCount: String, screenSize: String, audioPower: String, refrshRate: String, screenResolution: String, powerConsumption: String, cost: String, cpuCoreCount: String, wifiSpecs: String, screenType: String, isSmart: String, hdmiType: String, ciScore: String, rank: Int, imageUrl: String) {
         self.name = name
         self.brand = brand
         self.warranty = warranty

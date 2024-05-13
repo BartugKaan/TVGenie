@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct TVCellView: View {
+    @State var name : String
+    @State var brand : String
+    @State var rank : Int
+    @State var imageUrl : String
     var body: some View {
         VStack{
             HStack{
@@ -15,11 +19,11 @@ struct TVCellView: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: 150, height: 100)
-                VStack{
-                    Text("TV Name")
-                        .font(.title2)
-                    Text("TV Brand")
-                        .font(.title3)
+                VStack(alignment: .leading){
+                    Text(name)
+                        .font(.system(size: 20))
+                    Text(brand)
+                        .font(.caption)
                     Spacer()
                 }
                 Spacer()
@@ -27,16 +31,19 @@ struct TVCellView: View {
                     Circle()
                         .frame(width: 50, height: 50)
                         .foregroundStyle(LinearGradient(colors: [.indigo,.purple], startPoint: .topLeading, endPoint: .bottomTrailing))
-                    Text("10")
-                        .font(.title)
+                    Text("\(rank)")
+                        .font(.title2)
                         .foregroundStyle(.white)
                 }
             }
         }
         .padding()
+        .onAppear{
+            
+        }
     }
 }
 
 #Preview {
-    TVCellView()
+    TVCellView(name: "Test", brand: "Beko", rank: 1, imageUrl: "https://resim.epey.com/902123/m_tcl-58p733-1.png")
 }

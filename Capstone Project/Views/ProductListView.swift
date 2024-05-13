@@ -7,8 +7,9 @@
 
 import SwiftUI
 
-struct ProductListView: View {
+struct ProductListView: View{
     @State var productName: String = ""
+    @StateObject var viewModel = ProductListViewModel()
     var body: some View {
         NavigationStack{
             VStack{
@@ -32,9 +33,13 @@ struct ProductListView: View {
                         Spacer()
                     }
                     List{
-                        //Cell Tasarımı
-                        ForEach(0..<5){i in
-                            TVCellView()
+                                                
+                        if viewModel.products.isEmpty {
+                            Text("Boş Liste")
+                        } else {
+                            ForEach(viewModel.products, id: \.id){item in
+                                TVCellView(name: item.name, brand: item.brand, rank: item.rank,imageUrl: item.imageUrl)
+                            }
                         }
                     }
                     .listItemTint(.clear)
@@ -60,6 +65,11 @@ struct ProductListView: View {
             }
             .toolbarBackground(.visible, for: .navigationBar)
             .toolbarBackground(Color.clear, for: .navigationBar)
+        }
+        .onAppear{
+            viewModel.setDatabaseQueue()
+            viewModel.loadAllData()
+            print(viewModel.products.count)
         }
     }
 }
