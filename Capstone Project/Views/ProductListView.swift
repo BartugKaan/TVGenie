@@ -121,7 +121,7 @@ struct FilterButtonView: View {
         ScrollView(.horizontal){
             HStack{
                 FilterButton(function: {
-                    viewModel.reloadAndSortProducts(by: .byRank)
+                    viewModel.loadAllData()
                 }, text: "Score")
                 FilterButton(function: {
                     viewModel.reloadAndSortProducts(by: .byCost)
