@@ -15,6 +15,8 @@ struct PhotoView: View {
     @State private var showResultSheet: Bool = false
     @State private var capturedImage: UIImage?
     @State private var detectedObjects: [Observation] = []
+    @State private var imagePickerSourceType: UIImagePickerController.SourceType = .camera
+
     let model = try! YOLOv8(configuration: MLModelConfiguration())
     var body: some View {
         VStack {
@@ -26,26 +28,45 @@ struct PhotoView: View {
                 .multilineTextAlignment(.center)
                 .padding(.all, 24)
             Spacer()
-            Button(action: {
-                isImagePickerPresented.toggle()
-            }, label: {
-                ZStack{
-                    Rectangle()
-                        .frame(width: 75,height: 75)
-                        .foregroundStyle(.linearGradient(colors: [.indigo,.pink], startPoint: .topLeading, endPoint: .bottomTrailing))
-                        .cornerRadius(30)
-                    Image(systemName: "camera.fill")
-                        .foregroundStyle(Color.white)
-                        .font(.title)
-                }
-                .padding(.top, 20)
-            })
-            .padding(.bottom, 30)
-            
-            .sheet(isPresented: $isImagePickerPresented, onDismiss: loadImage) {
-                ImagePicker(image: self.$capturedImage)
-                    .ignoresSafeArea()
+            HStack(spacing: 40){
+                Button(action: {
+                    imagePickerSourceType = .camera
+                    isImagePickerPresented.toggle()
+                }, label: {
+                    ZStack{
+                        Rectangle()
+                            .frame(width: 75,height: 75)
+                            .foregroundStyle(.linearGradient(colors: [.indigo,.pink], startPoint: .topLeading, endPoint: .bottomTrailing))
+                            .cornerRadius(30)
+                        Image(systemName: "camera.fill")
+                            .foregroundStyle(Color.white)
+                            .font(.title)
+                    }
+                    .padding(.top, 20)
+                })
+                Button(action: {
+                    imagePickerSourceType = .photoLibrary
+                    isImagePickerPresented.toggle()
+                }, label: {
+                    ZStack{
+                        Rectangle()
+                            .frame(width: 75,height: 75)
+                            .foregroundStyle(.linearGradient(colors: [.indigo,.pink], startPoint: .topLeading, endPoint: .bottomTrailing))
+                            .cornerRadius(30)
+                        Image(systemName: "photo.on.rectangle")
+                            .foregroundColor(.white)
+                            .font(.title)
+                    }
+                    .padding(.top, 20)
+                })
             }
+            .padding(.bottom, 8)
+            .sheet(isPresented: $isImagePickerPresented) {
+                ImagePicker(imagePickerSourceType: self.imagePickerSourceType) { image in
+                                self.capturedImage = image
+                                self.loadImage()
+                            }
+                        }
             .sheet(isPresented: $showResultSheet) {
                 VStack {
                     if let image = capturedImage {
@@ -159,20 +180,20 @@ struct PhotoView: View {
 }
 
 struct ImagePicker: UIViewControllerRepresentable {
-    @Binding var image: UIImage?
+    var imagePickerSourceType: UIImagePickerController.SourceType
+        var didFinishPicking: (UIImage) -> Void
     
     class Coordinator: NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
-        @Binding var image: UIImage?
+        var parent: ImagePicker
         
-        init(image: Binding<UIImage?>) {
-            _image = image
+        init(_ parent: ImagePicker) {
+            self.parent = parent
         }
         
-        func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+        func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
             if let uiImage = info[.originalImage] as? UIImage {
-                image = uiImage
+                parent.didFinishPicking(uiImage)
             }
-            
             picker.dismiss(animated: true)
         }
         
@@ -182,19 +203,19 @@ struct ImagePicker: UIViewControllerRepresentable {
     }
     
     func makeCoordinator() -> Coordinator {
-        return Coordinator(image: $image)
+        Coordinator(self)
     }
     
-    func makeUIViewController(context: UIViewControllerRepresentableContext<ImagePicker>) -> UIImagePickerController {
-        let picker = UIImagePickerController()
-        picker.delegate = context.coordinator
-        picker.sourceType = .camera
-        return picker
-    }
+    func makeUIViewController(context: Context) -> UIImagePickerController {
+            let picker = UIImagePickerController()
+            picker.sourceType = imagePickerSourceType
+            picker.delegate = context.coordinator
+            return picker
+        }
     
-    
-    func updateUIViewController(_ uiViewController: UIImagePickerController, context: UIViewControllerRepresentableContext<ImagePicker>) { }
+    func updateUIViewController(_ uiViewController: UIImagePickerController, context: Context) {}
 }
+
 
 
 
