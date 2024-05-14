@@ -11,6 +11,25 @@ import GRDB
 class ProductListViewModel: ObservableObject{
     @Published var products: [TVItem] = []
     private var dbQueue: DatabaseQueue?
+    @Published var searchText = ""
+    
+    
+    func searchWithText() {
+        if searchText.isEmpty {
+            loadAllData()
+        } else {
+            let lowercaseSearchText = searchText.lowercased()
+            let filteredProducts = products.filter { product in
+                let lowercasedName = product.name.lowercased()
+                let lowercasedBrand = product.brand.lowercased()
+                return lowercasedName.contains(lowercaseSearchText) || lowercasedBrand.contains(lowercaseSearchText)
+            }
+            
+            self.products = filteredProducts
+            
+        }
+    }
+    
     
     //MARK: - Database Integration
     func setDatabaseQueue() {
@@ -33,10 +52,10 @@ class ProductListViewModel: ObservableObject{
     
     func loadAllData() {
         var loadedProducts: [TVItem] = []
-
+        
         try? dbQueue?.read { db in
             let rows = try Row.fetchAll(db, sql: "SELECT * FROM TvDataset ORDER BY Ranking")
-
+            
             for row in rows {
                 loadedProducts.append(TVItem(
                     name: row[0],
@@ -61,11 +80,9 @@ class ProductListViewModel: ObservableObject{
                 ))
             }
         }
-
+        
         DispatchQueue.main.async {
             self.products = loadedProducts
         }
     }
-
-
 }

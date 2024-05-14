@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct ProductListView: View{
-    @State var productName: String = ""
     @StateObject var viewModel = ProductListViewModel()
+    @State var isLoading = true
     var body: some View {
         NavigationStack{
             VStack{
-                CustomSearchStack(searchText: productName)
+                CustomSearchStack(viewModel: viewModel)
                     .padding(.top,16)
                 VStack{
                     HStack{
@@ -24,35 +24,38 @@ struct ProductListView: View{
                     }
                     BrandButtonsViewGroup()
                 }
-                VStack{
-                    HStack{
-                        Text("Televisions sorted by the scores")
-                            .padding(.all, 16)
-                            .font(.title3)
-                            .multilineTextAlignment(.leading)
-                        Spacer()
-                    }
-                    List{
-                                                
-                        if viewModel.products.isEmpty {
-                            HStack(alignment: .center){
-                                Spacer()
-                                ProgressView()
-                                Spacer()
-                            }
-                        } else {
-                            ForEach(viewModel.products, id: \.id){item in
-                                NavigationLink {
-                                    // Detail Page Will Added
-                                    ProductDetailView(item: item)
-                                } label: {
-                                    TVCellView(name: item.name, brand: item.brand, rank: item.rank,imageUrl: item.imageUrl)
+                if isLoading{
+                    ProgressView()
+                }
+                else{
+                    VStack{
+                        HStack{
+                            Text("Televisions sorted by the scores")
+                                .padding(.all, 16)
+                                .font(.title3)
+                                .multilineTextAlignment(.leading)
+                            Spacer()
+                        }
+                        List{
+                            if viewModel.products.isEmpty {
+                                HStack(alignment: .center){
+                                    Spacer()
+                                    Text("We connot found \(viewModel.searchText) product!")
+                                    Spacer()
+                                }
+                            } else {
+                                ForEach(viewModel.products, id: \.id){item in
+                                    NavigationLink {
+                                        ProductDetailView(item: item)
+                                    } label: {
+                                        TVCellView(name: item.name, brand: item.brand, rank: item.rank,imageUrl: item.imageUrl)
+                                    }
                                 }
                             }
                         }
+                        .listItemTint(.clear)
+                        .listRowSpacing(30)
                     }
-                    .listItemTint(.clear)
-                    .listRowSpacing(30)
                 }
                 Spacer()
             }
@@ -78,6 +81,7 @@ struct ProductListView: View{
         .onAppear{
             viewModel.setDatabaseQueue()
             viewModel.loadAllData()
+            isLoading = false
             print(viewModel.products.count)
         }
     }
@@ -89,30 +93,25 @@ struct ProductListView: View{
 
 
 struct CustomSearchStack: View {
-    @State var searchText = ""
+    @StateObject var viewModel: ProductListViewModel
+
     var body: some View {
-        HStack(spacing:0){
-            TextField("Search",text: $searchText)
+        HStack(spacing: 0) {
+            TextField("Search", text: $viewModel.searchText)
+                .onChange(of: viewModel.searchText) { _ in
+                    viewModel.searchWithText()
+                }
                 .frame(height: 45)
                 .padding(.horizontal, 30)
                 .font(.title)
                 .overlay(
                     RoundedRectangle(cornerRadius: 14)
                         .stroke(Color(UIColor.tertiaryLabel), lineWidth: 2)
-                        .padding(.horizontal,16)
+                        .padding(.horizontal, 16)
                 )
-            Button(action: {
-                //TODO: Search Functionility
-                print("Test")
-            }, label: {
-                Image(systemName: "magnifyingglass")
-                    .font(.title2)
-                    .padding(0)
-            })
-            .disabled(searchText.isEmpty ? true : false)
-            .padding(.trailing, 16)
+                .padding(.trailing, 16)
         }
-        .padding(.top,8)
+        .padding(.top, 8)
     }
 }
 
