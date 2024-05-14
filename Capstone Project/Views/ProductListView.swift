@@ -44,6 +44,7 @@ struct ProductListView: View{
                             ForEach(viewModel.products, id: \.id){item in
                                 NavigationLink {
                                     // Detail Page Will Added
+                                    ProductDetailView(item: item)
                                 } label: {
                                     TVCellView(name: item.name, brand: item.brand, rank: item.rank,imageUrl: item.imageUrl)
                                 }
@@ -123,7 +124,7 @@ struct BrandButtonsViewGroup: View {
                 BrandButton(backgroundColor: .blue, text: "Vestel")
                 BrandButton(backgroundColor: .blue, text: "Beko")
                 BrandButton(backgroundColor: .blue, text: "LG")
-                BrandButton(backgroundColor: .blue, text: "Sonny")
+                BrandButton(backgroundColor: .blue, text: "Sony")
                 BrandButton(backgroundColor: .blue, text: "Samsung")
             }
             .padding(.horizontal, 16)

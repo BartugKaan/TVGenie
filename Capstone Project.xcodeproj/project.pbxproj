@@ -24,6 +24,7 @@
 		8146046B2BA2237400F3F521 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8146046A2BA2237400F3F521 /* Extensions.swift */; };
 		81525DD42BA4A0B50015A52F /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81525DD32BA4A0B50015A52F /* CameraView.swift */; };
 		81525DD62BA4A54E0015A52F /* ProductListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81525DD52BA4A54E0015A52F /* ProductListViewModel.swift */; };
+		81578D012BF3890B008D435B /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81578D002BF3890B008D435B /* ProductDetailView.swift */; };
 		81846F872BC0073400BAF3CB /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81846F862BC0073400BAF3CB /* OnboardingView.swift */; };
 		819942F32BA4AD7F00553934 /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819942F22BA4AD7F00553934 /* PhotoView.swift */; };
 		819942F72BA4C6B900553934 /* PasswordResetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819942F62BA4C6B900553934 /* PasswordResetView.swift */; };
@@ -78,6 +79,7 @@
 		8146046A2BA2237400F3F521 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		81525DD32BA4A0B50015A52F /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CameraView.swift; path = "Capstone Project/Components/CameraView.swift"; sourceTree = SOURCE_ROOT; };
 		81525DD52BA4A54E0015A52F /* ProductListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewModel.swift; sourceTree = "<group>"; };
+		81578D002BF3890B008D435B /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
 		81846F862BC0073400BAF3CB /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		819942F22BA4AD7F00553934 /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
 		819942F62BA4C6B900553934 /* PasswordResetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetView.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 				819942F22BA4AD7F00553934 /* PhotoView.swift */,
 				819942F62BA4C6B900553934 /* PasswordResetView.swift */,
 				81846F862BC0073400BAF3CB /* OnboardingView.swift */,
+				81578D002BF3890B008D435B /* ProductDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -405,6 +408,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81E6AE852BA0CAA30005BBE6 /* TVItem.swift in Sources */,
+				81578D012BF3890B008D435B /* ProductDetailView.swift in Sources */,
 				81E6AE872BA0CB520005BBE6 /* RegisterView.swift in Sources */,
 				814604672BA2217300F3F521 /* LoginViewModel.swift in Sources */,
 				81525DD42BA4A0B50015A52F /* CameraView.swift in Sources */,
