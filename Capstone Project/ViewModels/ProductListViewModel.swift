@@ -24,12 +24,11 @@ class ProductListViewModel: ObservableObject{
                 let lowercasedBrand = product.brand.lowercased()
                 return lowercasedName.contains(lowercaseSearchText) || lowercasedBrand.contains(lowercaseSearchText)
             }
-            
             self.products = filteredProducts
-            
         }
     }
     
+    //MARK: - Sorting Feature
     
     //MARK: - Database Integration
     func setDatabaseQueue() {

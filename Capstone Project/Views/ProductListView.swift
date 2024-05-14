@@ -22,7 +22,7 @@ struct ProductListView: View{
                             .font(.title3)
                         Spacer()
                     }
-                    BrandButtonsViewGroup()
+                    FilterButtonView(viewModel: viewModel)
                 }
                 if isLoading{
                     ProgressView()
@@ -115,16 +115,12 @@ struct CustomSearchStack: View {
     }
 }
 
-struct BrandButtonsViewGroup: View {
+struct FilterButtonView: View {
+    @StateObject var viewModel : ProductListViewModel
     var body: some View {
         ScrollView(.horizontal){
             HStack{
                 //TODO: Brandler kadar button olmalı
-                BrandButton(backgroundColor: .blue, text: "Vestel")
-                BrandButton(backgroundColor: .blue, text: "Beko")
-                BrandButton(backgroundColor: .blue, text: "LG")
-                BrandButton(backgroundColor: .blue, text: "Sony")
-                BrandButton(backgroundColor: .blue, text: "Samsung")
             }
             .padding(.horizontal, 16)
         }
