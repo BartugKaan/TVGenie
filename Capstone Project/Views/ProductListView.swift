@@ -35,7 +35,11 @@ struct ProductListView: View{
                     List{
                                                 
                         if viewModel.products.isEmpty {
-                            Text("Boş Liste")
+                            HStack(alignment: .center){
+                                Spacer()
+                                ProgressView()
+                                Spacer()
+                            }
                         } else {
                             ForEach(viewModel.products, id: \.id){item in
                                 NavigationLink {

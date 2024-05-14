@@ -19,15 +19,21 @@ struct TVCellView: View {
                 WebImage(url: URL(string: imageUrl))
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: 100,height: 100)
+                    .frame(width: 80,height: 80)
                     .padding(/*@START_MENU_TOKEN@*/EdgeInsets()/*@END_MENU_TOKEN@*/)
                     .background(.clear)
                 VStack(alignment: .leading){
                     Text(name)
                         .font(.system(size: 20))
                         .padding(.all, 4)
-                    Text(brand)
-                        .font(.caption)
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 5)
+                            .foregroundStyle(.blue)
+                            .frame(width: 60,height: 30)
+                        Text(brand)
+                            .font(.caption)
+                            .foregroundStyle(.white)
+                    }
                     Spacer()
                 }
                 Spacer()
