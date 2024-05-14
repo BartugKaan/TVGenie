@@ -29,6 +29,7 @@
 		819942F32BA4AD7F00553934 /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819942F22BA4AD7F00553934 /* PhotoView.swift */; };
 		819942F72BA4C6B900553934 /* PasswordResetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819942F62BA4C6B900553934 /* PasswordResetView.swift */; };
 		819942F92BA4CB4300553934 /* PasswordResetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819942F82BA4CB4300553934 /* PasswordResetViewModel.swift */; };
+		81C6875C2BF3B71D00684997 /* FilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C6875B2BF3B71D00684997 /* FilterButton.swift */; };
 		81D927002BA0B9730083E648 /* Capstone_ProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D926FF2BA0B9730083E648 /* Capstone_ProjectApp.swift */; };
 		81D927022BA0B9730083E648 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D927012BA0B9730083E648 /* MainView.swift */; };
 		81D927042BA0B9740083E648 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81D927032BA0B9740083E648 /* Assets.xcassets */; };
@@ -83,6 +84,7 @@
 		819942F22BA4AD7F00553934 /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
 		819942F62BA4C6B900553934 /* PasswordResetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetView.swift; sourceTree = "<group>"; };
 		819942F82BA4CB4300553934 /* PasswordResetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetViewModel.swift; sourceTree = "<group>"; };
+		81C6875B2BF3B71D00684997 /* FilterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterButton.swift; sourceTree = "<group>"; };
 		81D926FC2BA0B9730083E648 /* Capstone Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Capstone Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81D926FF2BA0B9730083E648 /* Capstone_ProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Capstone_ProjectApp.swift; sourceTree = "<group>"; };
 		81D927012BA0B9730083E648 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -252,6 +254,7 @@
 				81E6AE8D2BA0D1F60005BBE6 /* Logo.swift */,
 				812A3C532BA0D37A00E2414C /* BigButton.swift */,
 				81525DD32BA4A0B50015A52F /* CameraView.swift */,
+				81C6875B2BF3B71D00684997 /* FilterButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -431,6 +434,7 @@
 				81525DD62BA4A54E0015A52F /* ProductListViewModel.swift in Sources */,
 				81334E5B2BD6AB8500077EF4 /* Observation.swift in Sources */,
 				812A3C542BA0D37A00E2414C /* BigButton.swift in Sources */,
+				81C6875C2BF3B71D00684997 /* FilterButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

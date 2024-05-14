@@ -37,13 +37,17 @@ struct TVCellView: View {
                     Spacer()
                 }
                 Spacer()
-                ZStack{
-                    Circle()
-                        .frame(width: 50, height: 50)
-                        .foregroundStyle(LinearGradient(colors: [.indigo,.purple], startPoint: .topLeading, endPoint: .bottomTrailing))
-                    Text("\(rank)")
-                        .font(.title2)
-                        .foregroundStyle(.white)
+                VStack {
+                    Text("Rank")
+                        .fontWeight(.bold)
+                    ZStack{
+                        Circle()
+                            .frame(width: 50, height: 50)
+                            .foregroundStyle(LinearGradient(colors: [.indigo,.purple], startPoint: .topLeading, endPoint: .bottomTrailing))
+                        Text("\(rank)")
+                            .font(.title2)
+                            .foregroundStyle(.white)
+                    }
                 }
             }
         }

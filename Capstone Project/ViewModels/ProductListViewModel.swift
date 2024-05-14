@@ -29,6 +29,57 @@ class ProductListViewModel: ObservableObject{
     }
     
     //MARK: - Sorting Feature
+    enum SortingOptions{
+        case byBrand
+        case byCost
+        case byWarranty
+        case byHdmiCount
+        case byUsbCount
+        case byScreenSize
+        case byAudioPower
+        case byRefreshRate
+        case byResolution
+        case byPowerConsumption
+        case byCiScore
+        case byRank
+    }
+    
+    func sortProducts(by sortingOption: SortingOptions) {
+        var sortedProducts: [TVItem]
+            switch sortingOption {
+            case .byBrand:
+                sortedProducts = products.sorted { $0.brand < $1.brand }
+            case .byWarranty:
+                sortedProducts =  products.sorted { $0.warranty < $1.warranty }
+            case .byCost:
+                sortedProducts = products.sorted { $0.cost < $1.cost }
+            case .byHdmiCount:
+                sortedProducts = products.sorted { $0.hdmiCount < $1.hdmiCount }
+            case .byUsbCount:
+                sortedProducts = products.sorted { $0.usbCount < $1.usbCount }
+            case .byScreenSize:
+                sortedProducts = products.sorted { $0.screenSize < $1.screenSize }
+            case .byAudioPower:
+                sortedProducts = products.sorted { $0.audioPower < $1.audioPower }
+            case .byRefreshRate:
+                sortedProducts = products.sorted { $0.refrshRate < $1.refrshRate }
+            case .byResolution:
+                sortedProducts = products.sorted { $0.screenResolution < $1.screenResolution }
+            case .byPowerConsumption:
+                sortedProducts = products.sorted { $0.powerConsumption < $1.powerConsumption }
+            case .byCiScore:
+                sortedProducts = products.sorted { $0.ciScore < $1.ciScore }
+            case .byRank:
+                sortedProducts = products.sorted { $0.rank < $1.rank }
+            }
+        self.products = sortedProducts
+        }
+    
+    func reloadAndSortProducts(by sortingOption: SortingOptions){
+        sortProducts(by: sortingOption)
+    }
+    
+    
     
     //MARK: - Database Integration
     func setDatabaseQueue() {

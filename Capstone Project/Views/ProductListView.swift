@@ -17,7 +17,7 @@ struct ProductListView: View{
                     .padding(.top,16)
                 VStack{
                     HStack{
-                        Text("Brands")
+                        Text("Filter by")
                             .padding(.all, 16)
                             .font(.title3)
                         Spacer()
@@ -120,7 +120,40 @@ struct FilterButtonView: View {
     var body: some View {
         ScrollView(.horizontal){
             HStack{
-                //TODO: Brandler kadar button olmalı
+                FilterButton(function: {
+                    viewModel.reloadAndSortProducts(by: .byRank)
+                }, text: "Score")
+                FilterButton(function: {
+                    viewModel.reloadAndSortProducts(by: .byCost)
+                }, text: "Cost")
+                FilterButton(function: {
+                    viewModel.reloadAndSortProducts(by: .byWarranty)
+                }, text: "Warranty")
+                FilterButton(function: {
+                    viewModel.reloadAndSortProducts(by: .byScreenSize)
+                }, text: "Screen Size")
+                FilterButton(function: {
+                    viewModel.reloadAndSortProducts(by: .byResolution)
+                }, text: "Resolution")
+                FilterButton(function: {
+                    viewModel.reloadAndSortProducts(by: .byRefreshRate)
+                }, text: "RefreshRate")
+                FilterButton(function: {
+                    viewModel.reloadAndSortProducts(by: .byPowerConsumption)
+                }, text: "Power Consumtion")
+                FilterButton(function: {
+                    viewModel.reloadAndSortProducts(by: .byHdmiCount)
+                }, text: "Number of HDMI")
+                FilterButton(function: {
+                    viewModel.reloadAndSortProducts(by: .byUsbCount)
+                }, text: "Number of Usb")
+                FilterButton(function: {
+                    viewModel.reloadAndSortProducts(by: .byAudioPower)
+                }, text: "Audio Power")
+                FilterButton(function: {
+                    viewModel.reloadAndSortProducts(by: .byBrand)
+                }, text: "Brand")
+
             }
             .padding(.horizontal, 16)
         }
