@@ -4,8 +4,11 @@ This application was developed as a graduation project for the computer engineer
 
 ## Tech Stack
 -> SwiftUI for UI
+
 -> Firebase & Firestore for Database
+
 -> Python for gathering TV datas from various web sources
+
 -> Yolov8 for Object Detection system
 
 ## Installation
